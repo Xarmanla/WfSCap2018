@@ -12,7 +12,7 @@ header {
   flex-direction: row;
   height: 64px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .headerLeft {
@@ -32,20 +32,56 @@ header {
   text-transform: uppercase;
 }
 
+@media only screen and (maxwidth: 600px) {
+  .headerText {
+    display: none;
+  }
+}
+
 .headerText b {
   font-weight: 700;
 }
 
-.headerRight {
-
-}
-
 .headerMenu {
-  margin-left: 400px;
+  margin-right: 16px;
 }
 
 .headerMenu a {
   margin-left: 18px;
+}
+
+.menuIcon {
+  height: 24px;
+  width: 24px;
+  margin: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerMenu {
+    display: none;
+  }
+  .headerMenuMobile {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+#onCampus {
+  background-image: url("../images/ic-on-campus.svg");
+}
+
+#online {
+  background-image: url("../images/ic-online.svg");
+}
+
+#login {
+  background-image: url("../images/ic-login.svg");
+}
+
+@media only screen and (max-width: 600px) {
+  .informationLeft {
+    display: none;
+  }
 }
 
 .banner {
@@ -58,6 +94,15 @@ header {
   width: 1000px;
 }
 
+@media only screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+  }
+  .bannerLeft {
+    width: 100%;
+  }
+}
+
 .bannerImage {
   margin: 32px 24px 32px 24px;
   height: 450px;
@@ -68,6 +113,7 @@ header {
 .bannerRight {
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
   justify-content: center;
 }
 
@@ -91,6 +137,7 @@ header {
   padding-left: 190px;
   padding-bottom: 10px;
   margin-top: 16px;
+  margin-bottom: 24px;
   font-size: 14px;
 }
 
@@ -127,14 +174,23 @@ header {
   flex-direction: row:
 }
 
+@media only screen and (max-width: 600px) {
+  .informationLeft {
+    display: none;
+  }
+  .informationItem {
+    flex-direction: column;
+    }
+}
+
 .informationMainImage {
   height: 250px;
   background-image: cover;
 }
 
 .informationImage {
-  height: 100px;
-  width: 90px;
+  height: 200px;
+  width: 100%;
   margin: 16px;
   background-size: cover;
 }
@@ -217,7 +273,7 @@ header {
 }
 
 .course {
-  margin: 16px;
+  margin: 4px 16px 16px 16px;
   width: 300px;
   display: flex;
   text-align: left;
@@ -251,6 +307,12 @@ header {
   margin-bottom: 16px;
   font-size: 14px;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+  .courseImage, .courseWord, .courseText {
+    display: none;
+  }
 }
 
 #software {
@@ -288,6 +350,7 @@ header {
   justify-content: center;
   font-size: 30px;
   font-weight: 600;
+  margin: 16px;
 }
 
 .thesisContent {
@@ -305,6 +368,12 @@ header {
 .thesisRight {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .thesisRight {
+    display: none;
+  }
 }
 
 .thesisItem {
@@ -367,5 +436,12 @@ footer {
   display: flex;
   flex-direction: row;
   margin: 16px;
-  flex-align: left;
+  align-content: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
 }
